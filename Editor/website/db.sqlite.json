@@ -1,0 +1,8 @@
+{
+    "type": "sqlite",
+    "user": "",
+    "password": "",
+    "host": "localhost",
+    "port": "",
+    "db": "/home/colin/temp/editor.db"
+}
