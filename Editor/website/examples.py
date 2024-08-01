@@ -6,10 +6,7 @@ examples = Blueprint('examples', __name__)
 
 @examples.route('/examples/<path:path>', methods=['GET', 'POST'])
 def editorexamples(path):
-    return send_from_directory('static/examples', path)
-
-# TK COLIN shouldn't need these two as nginx will sort out in VM
-
+    return send_from_directory('/mnt/DataTablesSrc/extensions/Editor-Node-Demo//examples', path)
 
 @examples.route('/DataTables/<path:path>')
 def datatables(path):
@@ -19,11 +16,9 @@ def datatables(path):
 def editor(path):
     return send_from_directory('/mnt/DataTablesSrc/built/DataTables/extensions', path)
 
-
 @examples.route('/css/<path:path>')
 def css(path):
     return send_from_directory('/mnt/DataTablesSrc/extensions/Editor-Node-Demo/public/css', path)
-
 
 @examples.route('/js/<path:path>')
 def js(path):
